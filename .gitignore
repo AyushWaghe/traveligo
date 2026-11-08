@@ -1,0 +1,117 @@
+# ==========================================
+# 1. Python Virtual Environments
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+
+# ==========================================
+# 2. Python Cache & Compiled Files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+
+# ==========================================
+# 3. Environment Variables & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# ==========================================
+# 4. IDE & Editor Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==========================================
+# 5. Logs & Debugging
+# ==========================================
+*.log
+logs/
+debug/
+*.trace
+
+# ==========================================
+# 6. Qdrant Local Storage
+# ==========================================
+qdrant_storage/
+qdrant_data/
+.qdrant/
+
+# ==========================================
+# 7. Vector Databases & Embeddings
+# ==========================================
+chroma_db/
+chroma/
+vector_store/
+vectorstore/
+embeddings_cache/
+.cache/
+
+# ==========================================
+# 8. RAG Documents & Generated Data
+# ==========================================
+data/raw/
+data/processed/
+data/uploads/
+data/temp/
+
+uploads/
+temp/
+tmp/
+
+# Ignore PDFs if they contain user documents
+# *.pdf
+
+# ==========================================
+# 9. LangGraph Checkpoints & Local State
+# ==========================================
+checkpoints/
+.langgraph/
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# 10. Jupyter Notebooks
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# 11. Testing & Coverage
+# ==========================================
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+test-results/
+
+# ==========================================
+# 12. Build & Distribution
+# ==========================================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+
+.DS_Store
+Thumbs.db
+desktop.ini
