@@ -1,8 +1,8 @@
 import json
 import asyncio
 from pathlib import Path
-from hybrid_text_splitter import split_text
-from qdrant_service import get_qdrant_vector_store
+from rag.ingestion.hybrid_text_splitter import split_text
+from rag.ingestion.qdrant_service import get_qdrant_vector_store
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
