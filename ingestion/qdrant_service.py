@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 
@@ -41,6 +42,6 @@ def get_qdrant_vector_store()->QdrantVectorStore:
         
     return QdrantVectorStore(
         client=qdrant_client,
-        collection_name=COLLECTION_NAMEm
+        collection_name=COLLECTION_NAME,
         embedding=embeddings
     )

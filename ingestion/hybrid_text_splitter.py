@@ -16,7 +16,7 @@ def split_text(
     
     pdf_path=Path(file_path)
     
-    if not pdf_path.is_file() or pdf_path.suffix.lower()!="pdf":
+    if not pdf_path.is_file() or pdf_path.suffix.lower()!=".pdf":
         raise ValueError(f"Invalid document type. File is not a PDF at {pdf_path}")
     
     if chunk_size<=0 or not 0<=chunk_overlap<chunk_size:
@@ -60,7 +60,12 @@ def split_text(
         chunk_overlap=chunk_overlap
     )
     
-    chunks=recurrsive_text_splitter.split_text(sections)
+    chunks=recurrsive_text_splitter.split_documents(sections) #note that splt_documetns accetps a list of langchain Documents and splits them into smaller docuemetns 
+    
+    
+    # split_documents(sections) takes the Document objects in sections and returns 
+    # smaller Document objects—the chunks. Each chunk contains part of the original
+    # text and retains its metadata.
     
     for ind,chunk in enumerate(chunks):
         chunk.metadata["chunk_index"]=ind

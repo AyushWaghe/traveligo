@@ -1,8 +1,7 @@
 import json
+import asyncio
 from pathlib import Path
-from uuid import uuid4
-
-from ingestion.hybrid_text_splitter import split_text
+from hybrid_text_splitter import split_text
 from qdrant_service import get_qdrant_vector_store
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +41,9 @@ async def ingest_documents():
         )
         
         print(f"Document {pdf_path} uploaded to Qdrant.")
+        
+if __name__ == "__main__":
+    asyncio.run(ingest_documents())
     
     
     
