@@ -1,10 +1,10 @@
 import json
 import asyncio
 from pathlib import Path
-from rag.ingestion.hybrid_text_splitter import split_text
-from rag.ingestion.qdrant_service import get_qdrant_vector_store
+from hybrid_text_splitter import split_text
+from qdrant_service import get_qdrant_vector_store
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 CONFIG_PATH = BASE_DIR / "config" / "docs_to_upload.json"
 
